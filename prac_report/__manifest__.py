@@ -9,10 +9,11 @@
     "website": "www.xyz.com",
     "depends": ['contacts','base','purchase','sale','product','report_xlsx'],
     "data": [
-        # "security/ir.model.access.csv",
+        # "security/security.xml",
+        "security/ir.model.access.csv",
         # "data/.xml",
-        # wizard/,
-        # "views/.xml",
+        "wizard/sale_order_report_print.xml",
+        "views/menuitem.xml",
         "report/res_user_template.xml",
         "report/user_report.xml",
         

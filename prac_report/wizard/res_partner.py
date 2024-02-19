@@ -16,5 +16,5 @@ class ResPartnerWizard(models.TransientModel):
     )
     age = fields.Integer("Age")
 
-class ResPartner(models.TransientModel):
-    _inherit = 'res.partner'
+# class ResPartner(models.TransientModel):
+#     _inherit = 'res.partner'

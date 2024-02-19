@@ -10,3 +10,6 @@ class SaleOrderReportPrint(models.TransientModel):
     date_stop = fields.Date(string='End Date', help="Default end date for Sale order.")
 
     # display_invoice_alert = fields.Boolean('Invoice Alert', compute='_compute_display_invoice_alert')
+
+    def action_sale_order_apply(self):
+        pass

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- <menuitem id="report_sales_team"
+        name="Wizard D"
+        parent="sale.sale_order_menu"
+        sequence="3"/> -->
+
+    <menuitem id="menu_sale_order_report_print"
+        name="Sales Order Report Print"
+        parent="sale.sale_order_menu"
+        action="sale_order_report_print_action"
+        sequence="5"/>
+    
+</odoo>
+ <!-- groups="account.group_account_readonly" -->
