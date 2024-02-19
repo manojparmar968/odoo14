@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_student_form" model="ir.ui.view">
+            <field name="name">student.form</field>
+            <field name="model">student</field>
+            <field name="arch" type="xml">
+                <form string="student">
+                    <header>
+                        <button name="action_confirm" string="Fees Paid" class="btn-primary" type="object" groups="student.group_student_user"/>
+                        <field name="Stage" widget="statusbar" statusbar_visible="fees_not_paid,fees_paid"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="Stage"/>
+                                <field name="Roll_no"/>
+                                <field name="mobile_no"/>
+                                <field name="mobile" />
+                            </group>
+                            <group>
+                                <field name="student_class"/>
+                                <field name="Section"/>
+                                <field name="Is_active" readonly="1" />
+                                <field name="fees_Paid_month" readonly="1"/>
+                                <field name="currency_id" invisible="1"/>
+                                <field name="company_id" invisible="1"/>
+                                <field name="fees_paid_amount" widget="monetary"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <!-- Chatter -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" groups="base.group_user"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="view_student_list" model="ir.ui.view">
+            <field name="name">student.list</field>
+            <field name="model">student</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="currency_id" column_invisible="1"/>
+                    <field name="company_id" column_invisible="True"/>
+                    <field name="name"/>
+                    <field name="Roll_no"/>
+                    <field name="mobile_no"/>
+                    <field name="mobile" />
+                    <field name="student_class"/>
+                    <field name="Section"/>
+                    <field name="Is_active" optional="hide"/>
+                    <field name="Stage"/>
+                    <field name="fees_Paid_month" optional="hide"/>
+                    <field name="fees_paid_amount" widget="monetary" sum="Total Amount"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_student_search" model="ir.ui.view">
+            <field name="name">student.search</field>
+            <field name="model">student</field>
+            <field name="arch" type="xml">
+                <search string="student">
+                    <field name="name" string="Name"/>
+                    <field string="mobile_no" name="mobile_no" />
+                    <field name="mobile" />
+                    <separator/>
+                    <filter string="Stage" name="Stage" domain="[('Stage', '=', 'fees_not_paid')]"/>
+                    <separator/>
+                    <group string="Group By">
+                        <filter string="Class" name="group_by_student_class" domain="" context="{'group_by':'student_class'}"/>
+                        <filter string="Section" name="group_by_Section" domain="" context="{'group_by':'Section'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record id="action_student" model="ir.actions.act_window">
+            <field name="name">student</field>
+            <field name="res_model">student</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="student"
+        id="menu_student_menu_root">
+        <menuitem id="menu_student" name="student" action="action_student" />
+    </menuitem>
+    
+</odoo>
+ <!-- groups="account.group_account_readonly" -->
