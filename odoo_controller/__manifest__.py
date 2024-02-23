@@ -1,0 +1,20 @@
+{
+    "name": "Controllers",
+    "version": '1.0',
+    "category": "interview/controller",
+    "license": "AGPL-3",
+    "summary": "",
+    "author": "",
+    "maintainers": ["Manoj Parmar"],
+    "website": "www.xyz.com",
+    "depends": ['base'],
+    "data": [
+        # "security/ir.model.access.csv",
+        # "views/.xml",
+        # "report/.xml",
+        # "data/.xml",
+    ],
+    "installable": True,
+    'auto_install': False,
+    "application": True,
+}
