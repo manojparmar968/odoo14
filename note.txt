@@ -1,0 +1,6 @@
+https://www.youtube.com/watch?v=DJyPx5u6sd0&list=PLqRRLx0cl0homY1elJbSoWfeQbRKJ-oPO
+
+//"args": ["-c","/media/developer/Odoo/odoo14/basic14/odoo-14.0/basic14.conf","-u","appname","-d","db"],
+Create basic module by cmd
+
+./odoo-bin scaffold learn_controllers ../learning
