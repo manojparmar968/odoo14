@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_sale_detail_by_customer">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <div class="oe_structure"/>
+                    <div class="text-center">
+                        <h2>Sale Detail</h2>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>Customer</td>
+                            <td>:</td>
+                            <td>
+                                <t t-if="temp_data.get('partner_id')">
+                                    <t t-esc="temp_data['partner_id'][1]"/>
+                                </t>
+                            </td>
+                            <span/>
+                            <td>From</td>
+                            <td>:</td>
+                            <td>
+                                <t t-if="temp_data.get('date_start')">
+                                    <t t-esc="temp_data['date_start']"/>
+                                </t>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="table table-bordered mt32">
+                        <thead>
+                            <tr>
+                                <th name="th_order_name" class="text-left">
+                                    <span>Order Name</span>
+                                </th>
+                                <th name="th_state" class="text-left">
+                                    <span>State</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <t t-foreach="sale_rec" t-as="rec">
+                            <tr>
+                                <td>
+                                    <span t-esc="rec['name']"/>
+                                </td>
+                                <td>
+                                    <span t-esc="rec['state']"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -6,10 +6,18 @@
         <field name="arch" type="xml">
             <form string="Sale order Report Print">
                 <group class="oe_title">
-                    <field name="order_id" options="{'no_create_edit': True}" />
+                    <group class="oe_title">
+                        <field name="partner_id" options="{'no_create_edit': True}" />
+                    </group>
+                    <group class="oe_title">
+                        <field name="date_start"/>
+                        <field name="date_stop"/>
+                    </group>
                 </group>
+                
                 <footer>
                     <button name="action_sale_order_apply" string="Submit" type="object" class="btn-primary"/>
+                    <button name="action_sale_order_report_by_order" string="Sale Report By Customer" type="object" class="btn-primary"/>
                     <button string="Cancel" class="btn-secondary" special="cancel"/>
                 </footer>
             </form>
@@ -17,7 +25,7 @@
     </record>
 
     <record id="sale_order_report_print_action" model="ir.actions.act_window">
-        <field name="name">sale order report print</field>
+        <field name="name">sale order report print wizard</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">sale.order.report.print</field>
         <field name="view_mode">form</field>

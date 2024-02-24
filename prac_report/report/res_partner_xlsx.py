@@ -5,6 +5,7 @@ import io
 class ResPartnerXlsx(models.AbstractModel):
     _name = 'report.prac_report.report_respartner_xlsx'
     _inherit = 'report.report_xlsx.abstract'
+    _description = 'report prac_report report_respartner_xlsx'
 
     # https://xlsxwriter.readthedocs.io/ ---> documenattion
 

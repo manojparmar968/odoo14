@@ -1,7 +1,7 @@
 {
     "name": "Report",
     "version": '1.0',
-    "category": "interview/Sales & Inventory",
+    "category": "interview/Report",
     "license": "AGPL-3",
     "summary": "",
     "author": "Manoj Parmar",
@@ -13,6 +13,9 @@
         "security/ir.model.access.csv",
         # "data/.xml",
         "wizard/sale_order_report_print.xml",
+        "wizard/sale_template.xml",
+        "wizard/report.xml",
+        "views/sale_order.xml",
         "views/menuitem.xml",
         "report/res_user_template.xml",
         "report/user_report.xml",

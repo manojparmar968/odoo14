@@ -1,6 +1,11 @@
 https://www.youtube.com/watch?v=DJyPx5u6sd0&list=PLqRRLx0cl0homY1elJbSoWfeQbRKJ-oPO
 
 //"args": ["-c","/media/developer/Odoo/odoo14/basic14/odoo-14.0/basic14.conf","-u","appname","-d","db"],
-Create basic module by cmd
 
+Create basic module by cmd
 ./odoo-bin scaffold learn_controllers ../learning
+
+Button 2 types 1. object type that call python function 2. action type that call action from xml file
+
+record set we get number of ids for given domain
+search gead will give dict.
