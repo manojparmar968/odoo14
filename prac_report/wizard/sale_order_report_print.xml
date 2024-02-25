@@ -17,7 +17,8 @@
                 
                 <footer>
                     <button name="action_sale_order_apply" string="Submit" type="object" class="btn-primary"/>
-                    <button name="action_sale_order_report_by_order" string="Sale Report By Customer" type="object" class="btn-primary"/>
+                    <button name="action_sale_order_report_by_order" string="Sale PDF Report" type="object" class="btn-primary"/>
+                    <button name="action_sale_order_excel_report_by_order" string="Sale Excel Report" type="object" class="btn-primary"/>
                     <button string="Cancel" class="btn-secondary" special="cancel"/>
                 </footer>
             </form>

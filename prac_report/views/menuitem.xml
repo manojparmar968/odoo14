@@ -10,6 +10,12 @@
         parent="sale.sale_order_menu"
         action="sale_order_report_print_action"
         sequence="5"/>
+
+    <menuitem id="menu_res_partner_report_wizard"
+        name="res partner report wizard"
+        parent="sale.sale_order_menu"
+        action="res_partner_report_wizard_action"
+        sequence="6"/>
     
 </odoo>
  <!-- groups="account.group_account_readonly" -->

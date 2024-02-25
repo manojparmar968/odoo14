@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_partner_report_wizard_form_view" model="ir.ui.view">
+        <field name="name">res.partner.report.wizard.form</field>
+        <field name="model">res.partner.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="res partner report wizard">
+                <group class="oe_title">
+                    <group class="oe_title">
+                        <field name="gender" />
+                    </group>
+                    <group class="oe_title">
+                        <field name="age"/>
+                        <!-- <field name="date_stop"/> -->
+                    </group>
+                </group>
+                
+                <footer>
+                    <button name="button_action_print_report" string="Print Report" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="res_partner_report_wizard_action" model="ir.actions.act_window">
+        <field name="name">res.partner.report.wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="res_partner_report_wizard_form_view"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

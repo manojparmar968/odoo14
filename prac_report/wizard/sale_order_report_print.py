@@ -36,5 +36,22 @@ class SaleOrderReportPrint(models.TransientModel):
             'temp_data': self.read()[0],
             'sale_rec': sale_rec
         }
-        print("\n\n\n\n\n\n\n\n",data)
         return self.env.ref('prac_report.action_sale_order_report_print').report_action(self, data=data)
+    
+    def action_sale_order_excel_report_by_order(self):
+        domain = []
+        partner_id = self.partner_id
+        if partner_id:
+            domain += [('partner_id', '=', partner_id.id)]
+        date_start = self.date_start
+        if date_start:
+            domain += [('date_order', '>=', date_start)]
+        date_stop = self.date_stop
+        if date_stop:
+            domain += [('date_order', '<=', date_stop)]
+        sale_rec = self.env['sale.order'].search_read(domain)
+        data = {
+            'temp_data': self.read()[0],
+            'sale_rec': sale_rec
+        }
+        return self.env.ref('prac_report.action_sale_order_report_print_xlsx').report_action(self, data=data)
