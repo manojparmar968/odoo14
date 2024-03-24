@@ -13,3 +13,9 @@ https://bassaminfotech.com/excel-report-using-controllers-in-odoo-xlsx-report-in
 Create odoo14 documentation
 https://github.com/odoo/documentation/tree/14.0
 
+Response Status code API
+1. Informational => 1**
+2. Success => 2**
+3. Redirection => 3**
+4. Client Error => 4**
+5. Server Error => 5**
